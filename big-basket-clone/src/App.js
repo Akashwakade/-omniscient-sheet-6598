@@ -7,7 +7,7 @@ function App() {
     <div className="App">
        
 
-        <Flex margin={'auto'} alignItems={'center'}  bg='blue' w='80%' p={4} color='white'>
+        <Flex margin={'auto'} height={'50px'} alignItems={'center'}  bg='lightgreen' w='80%' p={4} color='white'>
           <Box><h1>image</h1></Box>
           <Spacer/>
           <Box width={'600px'} border={'2px solid red' }><Input placeholder='Search for Products...' /></Box>
