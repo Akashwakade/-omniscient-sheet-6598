@@ -1,14 +1,14 @@
-import { RangeSliderFilledTrack } from "@chakra-ui/react";
+
 import { Box,Flex,Spacer,Input } from '@chakra-ui/react'
-import {BsSearch} from 'react-icons/fa'
+import styles from "./css/Navbar.module.css"
 export default function Navbar(){
 
     return(
         <>
-         <Flex margin={'auto'} height={'50px'} alignItems={'center'}  bg='lightgreen' w='80%' p={4} color='white'>
+         <Flex className={styles.navbar} margin={'auto'} height={'50px'} alignItems={'center'}  bg='white' w='100%' boxShadow={"box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;"} p={4} color='white'>
           <Box><h1>image</h1></Box>
           <Spacer/>
-          <Box width={'600px'} border={'2px solid red' }><Input placeholder='Search for Products...' /><BsSearch /></Box>
+          <Flex width={'600px'} ><Input style={{borderColor:"black"}} placeholder='Search for Products...' /> <Box> <img width={30} src="https://cdn-icons-png.flaticon.com/128/54/54481.png"></img></Box></Flex>
           <Spacer/>
           <Box><h1>image2</h1></Box>
 
