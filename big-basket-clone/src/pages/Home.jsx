@@ -1,14 +1,16 @@
 import { Box, Flex } from "@chakra-ui/react"
 import BankOffers from "../components/BankOffers"
 import BestSeller from "../components/BestSeller"
+import Footer from "../components/Footer"
 import ImageSlider from "../components/imageSlider"
 import Navbar from "../components/Navbar"
 import SixImages from "../components/SixImages"
-
+import SignUpModal from "./Login"
 export default function Home(){
     return(
 
-        <>
+        <><SignUpModal />
+         
         <h1>home</h1>
         <Navbar />
         <ImageSlider />
@@ -23,6 +25,9 @@ export default function Home(){
         <BestSeller />
         </Flex>
         
+
+        {/* footer part */}
+        <Footer />
         </>
     )
 }
