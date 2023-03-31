@@ -1,6 +1,8 @@
 
 import {useReducer,useEffect,useState}from "react"
 import BestSellerReducer from "./BestSellerReducer"
+import { IconButton } from "@chakra-ui/react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 // import {deleteRestaurant, getData,postRestaurant} from "../api/api"
 import { getData } from "./api"
 import BestSellerCard from "./BestSellerCard"
@@ -66,20 +68,28 @@ const fetchAndUpdataData=(page,order)=>{
 //   {/* <button onClick={()=>setOrder("asc")}>sort by price ascending</button>
 //   <button onClick={()=>setOrder("desc")}>sort by price descending</button>
 //   */}
-     return <>
+
+const isDisabled = page === 1
+const isDisabledPlus=page===3
+     return ( <>
+
+<IconButton border={"2px solid red"} margin={"140px 0"} isDisabled={isDisabled} icon={<ChevronLeftIcon />} onClick={()=>setPage(page-1)} />
+
        { data.map((el)=>(
         <BestSellerCard  key={el.id} {...el}
            
          />
       ))} 
 
-    
+<IconButton isDisabled={isDisabledPlus} margin={"140px 0"} icon={<ChevronRightIcon />}  onClick={()=>setPage(page+1)} /> 
  
 
-{/* //  <button disabled={page===1} onClick={()=>setPage(page-1)}>PREV</button>
-//  <button disabled>{page}</button>
-//  <button  onClick={()=>setPage(page+1)}>NEXT</button> */}
+   
+  <button disabled>{page}</button>
+  
+
+
   </>
-// )    
+ )     
         
 }
