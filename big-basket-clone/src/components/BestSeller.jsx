@@ -1,7 +1,7 @@
 
 import {useReducer,useEffect,useState}from "react"
 import BestSellerReducer from "./BestSellerReducer"
-import { IconButton } from "@chakra-ui/react";
+import { border, IconButton } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 // import {deleteRestaurant, getData,postRestaurant} from "../api/api"
 import { getData } from "./api"
@@ -81,7 +81,7 @@ const isDisabledPlus=page===3
          />
       ))} 
 
-<IconButton isDisabled={isDisabledPlus} margin={"140px 0"} icon={<ChevronRightIcon />}  onClick={()=>setPage(page+1)} /> 
+<IconButton border={"2px solid red"} isDisabled={isDisabledPlus} margin={"140px 0"} icon={<ChevronRightIcon />}   onClick={()=>setPage(page+1)} /> 
  
 
    
