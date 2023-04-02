@@ -11,7 +11,7 @@ export default function Home(){
 
         <><SignUpModal />
          
-        <h1>home</h1>
+        
         <Navbar />
         <ImageSlider />
         <SixImages />

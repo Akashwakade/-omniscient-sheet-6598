@@ -10,7 +10,7 @@ export default function LoginSignUP( isOpen, onClose) {
   };
 
   return (
-   <> <h1>hello</h1>
+   <> 
     {/* <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
@@ -37,5 +37,5 @@ export default function LoginSignUP( isOpen, onClose) {
       </ModalContent>
     </Modal>
     </> */}
-  //</>);
+</>);
 }
