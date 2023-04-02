@@ -28,13 +28,13 @@ const fetchAndUpdataData=(page,order)=>{
     dispatch({type:"FETCHLOADING"});
     getData({
         page:page,
-        limit:5,
+        limit:4,
         sort:"price_starts_from",
         order:order
     })
     .then((data)=>{
         dispatch({type:"FETCHSUCCESS",payload:data?.data})
-        console.log(data.data)
+        // console.log(data.data)
     })
     .catch(()=>{
         dispatch({type:"FETCHERROR"})
@@ -76,7 +76,7 @@ const isDisabledPlus=page===3
 <IconButton border={"2px solid red"} margin={"140px 0"} isDisabled={isDisabled} icon={<ChevronLeftIcon />} onClick={()=>setPage(page-1)} />
 
        { data.map((el)=>(
-        <BestSellerCard  key={el.id} {...el}
+        <BestSellerCard  data={data} key={el.id} {...el}
            
          />
       ))} 

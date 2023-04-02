@@ -6,15 +6,15 @@ import ImageSlider from "../components/imageSlider"
 import Navbar from "../components/Navbar"
 import SixImages from "../components/SixImages"
 import SignUpModal from "./Login"
-import Signup from "./LoignwithName"
-export default function Home(){
+import Signup from "./LoginwithName"
+export default function Home({isLoggedIn}){
     return(
 
         <>
       
        
         
-        <Navbar />
+        <Navbar isLoggedIn={isLoggedIn} />
       
         <ImageSlider />
         <SixImages />
