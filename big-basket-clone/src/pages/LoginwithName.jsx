@@ -2,7 +2,9 @@ import { useState } from "react";
 import axios from "axios";
 import { Flex, Input,Button, Box } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
- export default function Signup() {
+
+// login with name mean signup means login
+ export default function Signup({setIsLoggedIn}) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -21,6 +23,7 @@ import { useNavigate } from "react-router-dom";
        console.log(user)
        if(user){
         alert("login success")
+        setIsLoggedIn(true)
         navigate('/');
        }else{
         setError('invalid name or password')
