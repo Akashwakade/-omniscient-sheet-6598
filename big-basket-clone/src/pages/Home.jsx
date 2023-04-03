@@ -6,13 +6,16 @@ import ImageSlider from "../components/imageSlider"
 import Navbar from "../components/Navbar"
 import SixImages from "../components/SixImages"
 import SignUpModal from "./Login"
-export default function Home(){
+import Signup from "./LoginwithName"
+export default function Home({isLoggedIn}){
     return(
 
-        <><SignUpModal />
-         
+        <>
+      
+       
         
-        <Navbar />
+        <Navbar isLoggedIn={isLoggedIn} />
+      
         <ImageSlider />
         <SixImages />
         <br></br>
@@ -28,6 +31,7 @@ export default function Home(){
 
         {/* footer part */}
         <Footer />
+        
         </>
     )
 }

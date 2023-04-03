@@ -1,17 +1,35 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Card, CardBody,Image,Heading,Text,
+    Divider,CardFooter,ButtonGroup,Button
+ } from "@chakra-ui/react";
 
 export default function BestSellerCard({image,name,price}){
  
     return(
       
       
-       
-        
-        <Box style={{border:"1px solid black",margin:"10px" ,width:"20%"}}>
-            <img src={image} width={"100%"} />
-            <h1>Name : {name}</h1>
-            <p> Price : {price}</p>
-        </Box>
+       <Card>
+        <CardBody>
+          
+            <Image src={image} width={"100%"} />
+          <Heading size={"md"}>Name : {name}</Heading>  
+ 
+            <Text color='blue.600' fontSize='2xl'>
+            Price :₹{price}
+         </Text>
+      
+        </CardBody>
+        <Divider />
+  <CardFooter>
+    <ButtonGroup spacing='2'>
+      <Button variant='solid' colorScheme='blue'>
+        Buy now
+      </Button>
+      <Button variant='ghost' colorScheme='blue'>
+        Add to cart
+      </Button>
+    </ButtonGroup>
+  </CardFooter>
+        </Card>
         
           
     )
