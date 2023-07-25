@@ -16,7 +16,7 @@ function handleLogout(){
   
   return (
     
-    <Flex border={"2px solid black"} alignItems="center">
+    <Flex  alignItems="center">
       <Icon as={FaUserCircle} boxSize={6} />
       
      {isLoggedIn?(
